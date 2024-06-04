@@ -126,6 +126,9 @@ div .half .double{
     color:white;
 }
 
+#main{
+    display:block;
+}
 .game{
 display: flex;
 background-color: #0E202E;
