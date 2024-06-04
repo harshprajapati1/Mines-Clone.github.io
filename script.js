@@ -11,10 +11,9 @@ function initialize(){
 }
 const arr = initialize()
 var mineCount = 0;
-const cons = document.getElementById('console');
+
 
 function reset(){
-   
     for(let i=1;i<=5;i++){
     var parent = document.getElementById('block' + i);
     var children = parent.children;
@@ -26,24 +25,25 @@ function reset(){
     }
 }
 mineCount = 0;
-cons.innerHTML ="Mine counter: 0 (3 mine game)" ;
+console.log("game over");
+alert("Game Over!");
 }
 
-
+function alert(){
+   
+}
 function call(el){
  var blockNum = parseInt(el.className,10);
 console.log(blockNum)
 if(arr.includes(blockNum)){
     el.style.backgroundColor = 'red';
     mineCount++;
-    cons.innerHTML ="Mine Count: " + mineCount;
 }
 else{
     el.style.backgroundColor = 'green';
 }
 if(mineCount>2){
-    cons.innerHTML ="Game Over" ;
-    setTimeout(reset, 2000); 
+    setTimeout(reset,1000)
 }
 
 }

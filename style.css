@@ -1,4 +1,7 @@
-
+*{
+    margin:0;
+    padding:0;
+}
 .switch-field {
     border-radius:30px;
     background:#0E202E;
