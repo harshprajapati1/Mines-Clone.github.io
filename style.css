@@ -127,15 +127,18 @@ div .half .double{
 }
 
 #main{
-    display:block;
-}
-.game{
-display: flex;
 background-color: #0E202E;
 width:435px;
 height:435px;
+
+line-height: 1.625;
+}
+.game{
+display: flex;
 align-items: center;
 justify-content: center;
+width:435px;
+height:435px;
 line-height: 1.625;
 }
 
