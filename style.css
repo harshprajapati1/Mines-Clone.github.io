@@ -16,16 +16,10 @@
     border: 0;
     overflow: hidden;
 }
-
 .betting-amount{
-        color: white;
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    margin:10px 0px 0px 0px;
 }
+
 .switch-field label {
     background-color: #0E202E;
     color: white;
@@ -50,7 +44,7 @@
 }
 
 .switch-field label:first-of-type {
-    width:100px;
+    width:120px;
     border-radius: 30px;
     margin:5px;
 }
@@ -58,7 +52,7 @@
 .switch-field label:last-of-type {
     border-radius: 30px;
     margin:5px;
-    width:100px;
+    width:120px;
 }
 
 
@@ -90,30 +84,40 @@ button{
     font:Arial;
     border-radius:10px;
     font-weight:bold;
-    width:300px;
+    width:330px;
+    color:black;
     background-color:#1FFE21;
     box-shadow:2px 2px 5px #1D333D;
     margin-top:1px;
     
 }
+
+
 #mines{
     padding:6px;
     color:white;
-    width:300px;
+    width:330px;
     height:auto;
     background-color:#0E202E;
 }
-p{
+
+#value{
+    width:230px;
+    padding:6px;
+    color:white;
+    height:auto;
+    background-color:#0E202E;
+}
+
+span,p{
     color:#9E98A8;
 }
 
-#value{
-    padding:6px;
-    color:white;
-    width:180px;
-    height:auto;
-    background-color:#0F212E;
+.mines-text{
+    margin:15px 0px 0px 0px;
 }
+
+
 span p{
     margin:10px 0px 0px 0px;
 }
@@ -132,7 +136,9 @@ justify-content: center;
 line-height: 1.625;
 }
 
-.block{
+#block{
+    font-family: Arial;
+    font-display:none;
     margin:5px;
     padding:2px;  
     display:block;
@@ -142,8 +148,20 @@ line-height: 1.625;
     color:white; 
     border-radius: 10px;
 }
-.block:hover{
+#block:hover{
     background-color:#547186;
     translate: 0px -3px;
     transition: 0.1s ease-in-out;
 }
+
+#console{
+    color: black;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:large;
+   padding: 10px;
+}
+#main{
+    display: flex; 
+}
+

@@ -8,47 +8,51 @@
 </head>
 
 <body>
+    <div id="main">
     <div class='game' id='game'>
-        <div class="block1">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+        <div id="block1" class="block1">
+            <button class="1" onclick="call(this)" id="block"></button>
+            <button class="2" onclick=call(this) id="block"></button>
+            <button class="3" onclick=call(this) id="block"></button>
+            <button class="4" onclick=call(this) id="block"></button>
+            <button class="5" onclick=call(this) id="block"></button>
         </div>       
-        <div class="block2">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+        <div id="block2" class="block2">
+            <button class="6" onclick=call(this) id="block"></button>
+            <button class="7" onclick=call(this) id="block"></button>
+            <button class="8" onclick=call(this) id="block"></button>
+            <button class="9" onclick=call(this) id="block"></button>
+            <button class="10" onclick=call(this) id="block"></button>
             
         </div>    
-        <div class="block3">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+        <div id="block3" class="block3">
+            <button class="11" onclick=call(this) id="block"></button>
+            <button class="12" onclick=call(this) id="block"></button>
+            <button class="13" onclick=call(this) id="block"></button>
+            <button class="14" onclick=call(this) id="block"></button>
+            <button class="15" onclick=call(this) id="block"></button>
             
         </div>    
-        <div class="block4">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+        <div id="block4" class="block4">
+            <button class="16" onclick=call(this) id="block"></button>
+            <button class="17" onclick=call(this) id="block"></button>
+            <button class="18" onclick=call(this) id="block"></button>
+            <button class="19" onclick=call(this) id="block"></button>
+            <button class="20" onclick=call(this) id="block"></button>
             
         </div>    
-        <div class="block5">
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
-            <div class="block"></div>
+        <div id="block5" class="block5">
+            <button class="21" onclick=call(this) id="block"></button>
+            <button class="22" onclick=call(this) id="block"></button>
+            <button class="23" onclick=call(this) id="block"></button>
+            <button class="24" onclick=call(this) id="block"></button>
+            <button class="25" onclick=call(this) id="block"></button>
             
         </div>   
     </div>
+    <p id="console">Mine counter: 0 (3 mine game)</p>
+</div>
+    
     <form class="form">
         <div class="switch-field">
             <input type="radio" id="radio-one" name="switch-one" value="yes" checked/>
@@ -56,17 +60,16 @@
             <input type="radio" id="radio-two" name="switch-one" value="no" />
             <label for="radio-two">Auto</label>    
         </div>
-        <p class='amount'>
-             <p class='betting-amount'><span>Bet Amount</span><span class='money'>0.00</span></p>
-            <input step='0.1' type='number' id='value' name='value' </input>
+     <p class='betting-amount'><span>Bet Amount</span><span class='money'>0.00</span></p>
+            <input step='0.1' type='number' class="value" id='value' name='value'/>
                 <button class='half'>1/2</button>
             <button class='double'>2x</button>
             </div>
                 <div class='mine-select'>
-            <p>Mines</p>
-                <select name="mines-cnt" id="mines">
+            <p class="mines-text">Mines</p>
+                <select name="mines-cnt" id="mines" min="1" max="25">
             </select><br></br>
-              <input type="submit" class='bet-btn' value="Bet">
+              <button onclick='bet()' class='bet-btn'>Bet</button>
         </div>
     </form>
 </body>
