@@ -93,10 +93,6 @@ function clickTile(blockNum){
     if(mines.includes(blockNum)){
         display(blockNum,'red');
         profit.value=0;
-        let curr = balance.textContent;
-       curr = parseFloat(curr.substring(1));
-       curr = Math.max(curr - money,0);
-       balance.textContent = "₹" + curr.toPrecision(4);
         setTimeout(reset,1000);
      }
      else{
@@ -126,7 +122,8 @@ function bet(){
        prev = parseFloat(prev);
     if(start){   
         let finalbalance = currentMoney + prev;
-         balance.textContent = "₹ "+ finalbalance;
+        console.log("final:"+finalbalance + "currnt money:"+currentMoney)
+         balance.textContent = "₹ "+ finalbalance.toPrecision(5);
          reset();
         return;
     }
@@ -138,7 +135,7 @@ function bet(){
         alert("not enough funds!");
         return;
     }
-    balance.textContent = "₹"+ (prev-money);
+    balance.textContent = "₹"+ (prev-money).toPrecision(5);
     betAmount.textContent = "₹"+money;
     mineLimit = parseInt(mineInput.value,10);
     dispMines.textContent = mineLimit;
