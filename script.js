@@ -121,18 +121,24 @@ clickTile(blockNum);
 }
 
 function bet(){
-    if(start){
-       let prev = balance.textContent;
+    let prev = balance.textContent;
        prev = prev.substring(1);
-         prev = parseFloat(prev);
+       prev = parseFloat(prev);
+    if(start){   
         let finalbalance = currentMoney + prev;
          balance.textContent = "₹ "+ finalbalance;
          reset();
         return;
     }
+
     start = true;
     console.log("game started!");
     money = parseFloat(bettingInput.value).toPrecision(4);
+    if(prev < money){
+        alert("not enough funds!");
+        return;
+    }
+    balance.textContent = "₹"+ (prev-money);
     betAmount.textContent = "₹"+money;
     mineLimit = parseInt(mineInput.value,10);
     dispMines.textContent = mineLimit;
