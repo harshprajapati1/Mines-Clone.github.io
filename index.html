@@ -8,7 +8,9 @@
 </head>
 
 <body>
-    <div id="main">
+    <div class="balance" id="balance"><p id="bal" class="bal">0.00000</p> 
+         <p id="wallet" class="wallet">Wallet</p></div>
+    <div id="main">       
     <div class='game' id='game'>
         <div id="block1" class="block1">
             <button class="1" onclick="call(this)" id="block"></button>
@@ -47,7 +49,7 @@
             <button class="23" onclick=call(this) id="block"></button>
             <button class="24" onclick=call(this) id="block"></button>
             <button class="25" onclick=call(this) id="block"></button>
-            
+         </div>  
         </div>   
     </div>
 </div>
@@ -59,15 +61,30 @@
             <input type="radio" id="radio-two" name="switch-one" value="no" />
             <label for="radio-two">Auto</label>    
         </div>
-     <p class='betting-amount'><span>Bet Amount</span><span class='money'>0.00</span></p>
+     <p class='betting-amount'><span>Bet Amount</span><span class='money' id="money">&#8377; 0.00</span></p>
             <input step='0.1' type='number' class="value" id='value' name='value'/>
                 <button type="button" class='half'>1/2</button>
             <button type="button" class='double'>2x</button>
             </div>
+          
+            <div class="stats" id="stats">
+                <div id="mines-disp" class="mines-disp">Mines<div id="no-of-mines">3</div> </div>
+                <div id="diamond-disp" class="diamond-disp">Diamonds<div id="no-of-diamonds">22</div></div>
+            </div>
+            <div id="profitDiv" class="profitDiv">
+                <div class="profit-top" id="profit-top"><p class="multiplier" id="multiplier">Profit</p><p class="profit-amount" id="profit-amount">&#8377;0.00</p>
+                </div>
+                <input type="number" id="profit-value" class="profit-value"></input>
+            </div>
+            <button type="button" class="pick" id="pick" onclick="rand()">Pick random tile</button>
                 <div class='mine-select'>
             <p class="mines-text">Mines</p>
                 <select name="mines-cnt" id="mines">
-            </select><br></br>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+            </select>
               <button type="button" onclick="bet()" id="bet-btn" class='bet-btn'>Bet</button>
         </div>
     </form>

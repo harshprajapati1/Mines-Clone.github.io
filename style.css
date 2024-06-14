@@ -8,9 +8,6 @@
     display: flex;
     overflow: hidden;
 }
-.money{
-    padding-left:150px;
-}
 .switch-field input {
     position: absolute !important;
     clip: rect(0, 0, 0, 0);
@@ -20,7 +17,9 @@
     overflow: hidden;
 }
 .betting-amount{
-    margin:10px 0px 0px 0px;
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
 }
 
 .switch-field label {
@@ -58,7 +57,6 @@
     width:120px;
 }
 
-
 .form {
      background-color:#203742;
      width: 335px;
@@ -91,11 +89,13 @@ button{
     color:black;
     background-color:#1FFE21;
     box-shadow:2px 2px 5px #1D333D;
-    margin-top:1px;
+    margin-top:10px;
     
 }
 
-
+.mine-select{
+    margin-bottom: 20px;
+}
 #mines{
     padding:6px;
     color:white;
@@ -162,15 +162,85 @@ line-height: 1.625;
     translate: 0px -3px;
     transition: 0.1s ease-in-out;
 }
-
+.profitDiv{
+    margin-top: 5px;
+    color:#9E98A8;
+}
+.profit-value{
+    padding: 2px 0px 2px 10px;
+    background-color:#0E202E;
+    width:317px;
+    height:25px;
+    color:#9E98A8;
+    border-radius: 4px;
+}
 #console{
     color: black;
-    display: inline;
+    display:block;
     font-family: Arial, Helvetica, sans-serif;
     font-size:large;
    padding: 10px;
 }
-#main{
-    display: flex; 
+.profit-top{
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.balance{
+    background-color: #2E4453;
+    width: 425px;
+    border: #1A2D39 5px solid;
+    box-shadow:black 0px 5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
+     
+}
+.wallet{
+    border-radius:0px 5px 5px 0px;
+   background-color: #1475E1;
+   color: white;
+   padding: 5px 20px;
+}
+.bal{
+    color: white;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #0E202E;
+    padding:5px 20px;
+}
+
+#mines-disp, #diamond-disp{
+    color: #9E98A8;
+    display:flex; 
+    flex-direction:column;   
+}
+#stats{
+    display: none;
+    margin-top: 10px;
+}
+#no-of-mines , #no-of-diamonds{
+    color: white;
+    border-radius: 5px;
+    background-color:#2E4453;
+    padding:5px 80px 5px 5px;
+    margin: 5px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 77px;
+}
+
+.pick{
+    display: none;
+    margin-top: 10px;
+    /* padding:12px 216px 12px 5px; */
+    padding: 12px 110px;
+    border-radius: 5px;
+    text-align: center;
 }
 
