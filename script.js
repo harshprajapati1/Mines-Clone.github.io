@@ -97,6 +97,8 @@ function clickTile(blockNum){
      }
      else{
         display(blockNum,'green');
+        var audio = new Audio('diamond.mp3');
+        audio.play();
         clickedTiles.push(blockNum);
         console.log(multiplier[mineLimit][diamondCount]);
         multDisp.textContent = "Profit ("+multiplier[mineLimit][diamondCount]+1+"x)";
